@@ -1,0 +1,29 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://logginwolf.rk0cc.xyz/schemas/preferences.json",
+    "description": "Header metadata of Logginwolf archive file",
+    "title": "Logginwolf preferences",
+    "type": "object",
+    "properties": {
+        "edition": {
+            "type": "integer",
+            "description": "Version of archive file format",
+            "minimum": 1
+        },
+        "name": {
+            "type": "string",
+            "description": "Displayed name in the app"
+        },
+        "createdAt": {
+            "type": "string",
+            "description": "Date of this archive created (in local time)",
+            "format": "date-time"
+        }
+    },
+    "additionalProperties": true,
+    "required": [
+        "edition",
+        "name",
+        "createdAt"
+    ]
+}
